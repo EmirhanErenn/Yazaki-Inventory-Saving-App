@@ -1,0 +1,41 @@
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter Uygulamasi.csproj.AssemblyReference.cache
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter_Uygulamasi.Properties.Resources.resources
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter Uygulamasi.csproj.GenerateResource.cache
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter Uygulamasi.csproj.CoreCompileInputs.cache
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\Envanter Uygulamasi.exe.config
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\Envanter Uygulamasi.exe
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\Envanter Uygulamasi.pdb
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter Uygulamasi.exe
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter Uygulamasi.pdb
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter Uygulamasi.csproj.ResolveComReference.cache
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter_Uygulamasi.SifremiUnuttum.resources
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter_Uygulamasi.AnaSayfa.resources
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter_Uygulamasi.Kategori.resources
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter_Uygulamasi.GirisYap.resources
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter_Uygulamasi.Uyarilar.resources
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter_Uygulamasi.VeriGoruntule.resources
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter_Uygulamasi.AdminPaneli.resources
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter_Uygulamasi.YetkiKontrol.resources
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter_Uygulamasi.VeriSil.resources
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter_Uygulamasi.YetkiKontrol2.resources
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\ClosedXML.dll
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\ExcelNumberFormat.dll
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\Irony.dll
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\SixLabors.Fonts.dll
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\System.Buffers.dll
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\System.IO.Packaging.dll
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\System.Memory.dll
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\XLParser.dll
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\ClosedXML.xml
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\ExcelNumberFormat.xml
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\SixLabors.Fonts.xml
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\System.Buffers.xml
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\System.IO.Packaging.xml
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\System.Memory.xml
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter.5058993A.Up2Date
