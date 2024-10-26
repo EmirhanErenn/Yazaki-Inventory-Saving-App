@@ -94,6 +94,11 @@ namespace Envanter_Uygulamasi
         {
             Application.Exit();
         }
+
+        private void YetkiKontrol_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

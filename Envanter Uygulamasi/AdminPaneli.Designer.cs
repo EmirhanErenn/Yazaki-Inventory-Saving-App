@@ -121,7 +121,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(296, 79);
             this.button3.TabIndex = 22;
-            this.button3.Text = "Kullanıcı Verilerini Görüntüle";
+            this.button3.Text = "Veri Güncelleme Ekranı";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -255,6 +255,7 @@
             this.button5.TabIndex = 58;
             this.button5.Text = "Kullanıcıyı Kaydet";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // label7
             // 

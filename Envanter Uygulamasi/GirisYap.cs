@@ -79,7 +79,7 @@ namespace Envanter_Uygulamasi
                         }
                         else
                         {
-                            MessageBox.Show("Kullanıcı Adı veya Şifre Hatalı!");
+                            MessageBox.Show("Kullanıcı Adı veya Şifre Hatalı!", "UYARI",MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             textBox1.Clear();
                             textBox2.Clear();
                             textBox3.Clear();

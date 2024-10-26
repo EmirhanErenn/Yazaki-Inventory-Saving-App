@@ -188,7 +188,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "YetkiKontrol2";
-            this.Text = "YetkiKontrol2";
+            this.Text = "Yetki Kontrol Sayfası";
             this.Load += new System.EventHandler(this.YetkiKontrol2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

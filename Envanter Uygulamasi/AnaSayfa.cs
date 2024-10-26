@@ -82,7 +82,7 @@ namespace Envanter_Uygulamasi
             {
                 baglanti.Open(); // veri tabanını açıyoruz
                 komut.ExecuteNonQuery(); // verileri kaydetme
-                MessageBox.Show("Veri başarıyla eklendi.");
+                MessageBox.Show("Veri başarıyla eklendi.", "BAŞARILI", MessageBoxButtons.OK , MessageBoxIcon.Information);
             }
             catch (Exception ex) //Hatayı yakalamak için
             {
@@ -257,7 +257,7 @@ namespace Envanter_Uygulamasi
                     excelApp = null;
                     GC.Collect();
 
-                    MessageBox.Show("Veriler başarıyla Excel dosyasına kaydedildi.");
+                    MessageBox.Show("Veriler başarıyla Excel dosyasına kaydedildi.", "BAŞARILI", MessageBoxButtons.OK , MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
@@ -278,9 +278,7 @@ namespace Envanter_Uygulamasi
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Uyarilar form5 = new Uyarilar();
-            form5.Show();
-            this.Close();
+            
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -304,6 +302,37 @@ namespace Envanter_Uygulamasi
             yetkiKontrol2.Show();
             this.Close();
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            // Mevcut tarih ve saat bilgisi
+            string currentDateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+            // Outlook'u açarak e-posta gönder
+            try
+            {
+                // E-posta adresi, konu ve içerik
+                string subject = "Envanter Kayıt Uygulamasında Bir Hata Bulundu";
+                string body = $"Merhaba Geliştirici,\n\n{currentDateTime} tarihinde uygulamanın Ana Sayfa kısmında bir hata yakaladım. Lütfen ilgilenir misiniz?\n";
+
+                // mailto linkini oluştur
+                string mailto = $"mailto:emirhanneren24@gmail.com?subject={Uri.EscapeDataString(subject)}&body={Uri.EscapeDataString(body)}";
+
+                // Outlook'u açarak e-posta oluştur
+                System.Diagnostics.Process.Start(mailto);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Outlook açılamadı: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            VeriGuncelle form41 = new VeriGuncelle();
+            form41.Show();
+            this.Hide();
+        }
     }
 }
 
@@ -312,3 +341,4 @@ namespace Envanter_Uygulamasi
 //silinenler dşye bir excel
 //EKlenen kategori kalıcı olsun
 //silinenlerde hangi tarihte silindi
+//Veri filtreleyip excel e kaydetme veri görüntüle de

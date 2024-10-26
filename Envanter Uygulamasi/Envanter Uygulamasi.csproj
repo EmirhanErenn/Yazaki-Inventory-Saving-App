@@ -152,17 +152,17 @@
     <Compile Include="GirisYap.Designer.cs">
       <DependentUpon>GirisYap.cs</DependentUpon>
     </Compile>
+    <Compile Include="KullaniciGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullaniciGuncelle.Designer.cs">
+      <DependentUpon>KullaniciGuncelle.cs</DependentUpon>
+    </Compile>
     <Compile Include="SifremiUnuttum.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SifremiUnuttum.Designer.cs">
       <DependentUpon>SifremiUnuttum.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Uyarilar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Uyarilar.Designer.cs">
-      <DependentUpon>Uyarilar.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -171,6 +171,12 @@
     </Compile>
     <Compile Include="VeriGoruntule.Designer.cs">
       <DependentUpon>VeriGoruntule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VeriGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VeriGuncelle.Designer.cs">
+      <DependentUpon>VeriGuncelle.cs</DependentUpon>
     </Compile>
     <Compile Include="VeriSil.cs">
       <SubType>Form</SubType>
@@ -202,11 +208,11 @@
     <EmbeddedResource Include="GirisYap.resx">
       <DependentUpon>GirisYap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KullaniciGuncelle.resx">
+      <DependentUpon>KullaniciGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SifremiUnuttum.resx">
       <DependentUpon>SifremiUnuttum.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Uyarilar.resx">
-      <DependentUpon>Uyarilar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -220,6 +226,9 @@
     </Compile>
     <EmbeddedResource Include="VeriGoruntule.resx">
       <DependentUpon>VeriGoruntule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VeriGuncelle.resx">
+      <DependentUpon>VeriGuncelle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VeriSil.resx">
       <DependentUpon>VeriSil.cs</DependentUpon>

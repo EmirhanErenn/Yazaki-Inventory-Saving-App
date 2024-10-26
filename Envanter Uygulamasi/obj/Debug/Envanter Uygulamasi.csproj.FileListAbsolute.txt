@@ -12,7 +12,6 @@ C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debu
 C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter_Uygulamasi.AnaSayfa.resources
 C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter_Uygulamasi.Kategori.resources
 C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter_Uygulamasi.GirisYap.resources
-C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter_Uygulamasi.Uyarilar.resources
 C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter_Uygulamasi.VeriGoruntule.resources
 C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter_Uygulamasi.AdminPaneli.resources
 C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter_Uygulamasi.YetkiKontrol.resources
@@ -39,3 +38,5 @@ C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debu
 C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter.5058993A.Up2Date
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter_Uygulamasi.KullaniciGuncelle.resources
+C:\Users\EXCALIBUR\source\repos\Envanter Uygulamasi\Envanter Uygulamasi\obj\Debug\Envanter_Uygulamasi.VeriGuncelle.resources

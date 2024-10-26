@@ -29,12 +29,17 @@ namespace Envanter_Uygulamasi
 
         private void button3_Click(object sender, EventArgs e)
         {
-            kullanici();
+            KullaniciGuncelle kullaniciguncelle = new KullaniciGuncelle();
+            kullaniciguncelle.Show();
+            this.Close();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             kullanici();
+
+            comboBox1.Items.Clear();
+            textBox1.Clear();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -77,36 +82,7 @@ namespace Envanter_Uygulamasi
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (textBox4.Text != textBox5.Text)
-            {
-                MessageBox.Show("Şifreler Aynı Değil!", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Eğer şifreler aynı değilse, işlemi durdur.
-            }
-
-            string baglan = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + System.Windows.Forms.Application.StartupPath + "\\envanter.mdb";
-
-            // baglanti nesnesini tanımlayıp başlatıyoruz
-            using (OleDbConnection baglanti = new OleDbConnection(baglan))
-            {
-                // Komut nesnesini başlatıp baglanti nesnesine bağlıyoruz
-                OleDbCommand komut = new OleDbCommand("INSERT INTO kullanici (sicil, kullaniciadi, sifre, yazakimail, yetki) VALUES (@sicil, @kullaniciadi, @sifre, @yazakimail, @yetki)", baglanti);
-                komut.Parameters.AddWithValue("@sicil", textBox2.Text);
-                komut.Parameters.AddWithValue("@kullaniciadi", textBox3.Text);
-                komut.Parameters.AddWithValue("@sifre", textBox4.Text);
-                komut.Parameters.AddWithValue("@yazakimail", textBox6.Text);
-                komut.Parameters.AddWithValue("@yetki", checkBox1.Checked);
-
-                try
-                {
-                    baglanti.Open(); // veri tabanını açıyoruz
-                    komut.ExecuteNonQuery(); // verileri kaydetme
-                    MessageBox.Show("Veri başarıyla eklendi.");
-                }
-                catch (Exception ex) //Hatayı yakalamak için
-                {
-                    MessageBox.Show("Veri eklenirken bir hata oluştu: " + ex.Message);
-                }
-            }
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -120,6 +96,8 @@ namespace Envanter_Uygulamasi
                 baglanti.Open();
                 komut.ExecuteNonQuery();
                 baglanti.Close();
+
+                kullanici();
             }
             else if (result == DialogResult.Cancel)
             {
@@ -139,7 +117,7 @@ namespace Envanter_Uygulamasi
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-            if (!checkBox3.Checked)
+            if (checkBox3.Checked)
             {
                 SadeceYetkisizKullanicilariGetir();
                 checkBox2.Checked = false;
@@ -202,6 +180,22 @@ namespace Envanter_Uygulamasi
 
         private void SadeceYetkisizKullanicilariGetir()
         {
+            DialogResult result = MessageBox.Show("Seçili Olan Kullanıcı Silinecek. Emin misiniz?", "UYARI", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.OK)
+            {
+                komut = new OleDbCommand("DELETE FROM kullanici WHERE sicil=@sicil", baglanti);
+                komut.Parameters.AddWithValue("@sicil", dataGridView1.CurrentRow.Cells[0].Value); //Dgv deki seçili olan hücrenin ilk hücresinindeki veri kimlik değişkenine eşit oldu.
+                baglanti.Open();
+                komut.ExecuteNonQuery();
+                baglanti.Close();
+
+                kullanici();
+            }
+            else if (result == DialogResult.Cancel)
+            {
+                // İptal işlemleri buraya
+            }
             string baglan = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + System.Windows.Forms.Application.StartupPath + "\\envanter.mdb";
             string sorgu = "SELECT * FROM kullanici WHERE yetki = False"; // 'yetki' alanı False olanlar
 
@@ -298,9 +292,36 @@ namespace Envanter_Uygulamasi
             if (selectedRowIndex >= 0 && selectedColumnIndex >= 0)
             {
                 // Seçili hücredeki veriyi temizliyoruz
-                dataGridView1.Rows[selectedRowIndex].Cells[selectedColumnIndex].Value = string.Empty;
+                dataGridView1.Rows[selectedRowIndex].Cells[selectedColumnIndex].Value = DBNull.Value;
 
-                kullanici();
+                // DataTable'ı güncelleyerek değişikliği yansıtıyoruz
+                DataTable dt = (DataTable)dataGridView1.DataSource;
+                dt.Rows[selectedRowIndex][selectedColumnIndex] = DBNull.Value;
+
+                // Silme işlemi için gerekli olan sütun ve değer
+                string columnName = dataGridView1.Columns[selectedColumnIndex].Name;
+                string primaryKeyColumn = "sicil"; // Birincil anahtar sütun adı
+                string primaryKeyValue = dt.Rows[selectedRowIndex][primaryKeyColumn].ToString();
+
+                // Veritabanından silme işlemi
+                string baglan = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + System.Windows.Forms.Application.StartupPath + "\\envanter.mdb";
+                using (OleDbConnection baglanti = new OleDbConnection(baglan))
+                {
+                    try
+                    {
+                        baglanti.Open();
+                        // Hücreyi güncelleme sorgusu
+                        string sorgu = $"UPDATE kullanici SET {columnName} = NULL WHERE {primaryKeyColumn} = @primaryKeyValue";
+                        OleDbCommand komut = new OleDbCommand(sorgu, baglanti);
+                        komut.Parameters.AddWithValue("@primaryKeyValue", primaryKeyValue);
+                        komut.ExecuteNonQuery();
+                        MessageBox.Show("Hücre ve veritabanındaki kayıt başarıyla silindi.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Hata: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
             else
             {
@@ -308,15 +329,51 @@ namespace Envanter_Uygulamasi
             }
         }
 
+
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
             // Hücre seçildiğinde ilgili hücreyi kontrol ediyoruz
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
                 // Seçili hücrenin Row ve Column indekslerini kaydediyoruz
                 selectedRowIndex = e.RowIndex;
                 selectedColumnIndex = e.ColumnIndex;
+            }
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            if (textBox4.Text != textBox5.Text)
+            {
+                MessageBox.Show("Şifreler Aynı Değil!", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Eğer şifreler aynı değilse, işlemi durdur.
+            }
+
+            string baglan = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + System.Windows.Forms.Application.StartupPath + "\\envanter.mdb";
+
+            // baglanti nesnesini tanımlayıp başlatıyoruz
+            using (OleDbConnection baglanti = new OleDbConnection(baglan))
+            {
+                // Komut nesnesini başlatıp baglanti nesnesine bağlıyoruz
+                OleDbCommand komut = new OleDbCommand("INSERT INTO kullanici (sicil, kullaniciadi, sifre, yazakimail, yetki) VALUES (@sicil, @kullaniciadi, @sifre, @yazakimail, @yetki)", baglanti);
+                komut.Parameters.AddWithValue("@sicil", textBox2.Text);
+                komut.Parameters.AddWithValue("@kullaniciadi", textBox3.Text);
+                komut.Parameters.AddWithValue("@sifre", textBox4.Text);
+                komut.Parameters.AddWithValue("@yazakimail", textBox6.Text);
+                komut.Parameters.AddWithValue("@yetki", checkBox1.Checked);
+
+                try
+                {
+                    baglanti.Open(); // veri tabanını açıyoruz
+                    komut.ExecuteNonQuery(); // verileri kaydetme
+                    MessageBox.Show("Veri başarıyla eklendi.", "BAŞARILI", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    kullanici();
+                }
+                catch (Exception ex) //Hatayı yakalamak için
+                {
+                    MessageBox.Show("Veri eklenirken bir hata oluştu: " + ex.Message);
+                }
             }
         }
     }

@@ -113,9 +113,9 @@
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -204,6 +204,7 @@
             this.button4.TabIndex = 8;
             this.button4.Text = "Veri Güncelle";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // textBox3
             // 
@@ -938,18 +939,6 @@
             this.label36.TabIndex = 15;
             this.label36.Text = "Durumu:";
             // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button7.ForeColor = System.Drawing.SystemColors.Control;
-            this.button7.Location = new System.Drawing.Point(1118, 6);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(238, 51);
-            this.button7.TabIndex = 21;
-            this.button7.Text = "Önemli Uyarılar";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
             // button8
             // 
             this.button8.BackColor = System.Drawing.Color.MidnightBlue;
@@ -974,15 +963,27 @@
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Red;
+            this.button10.ForeColor = System.Drawing.SystemColors.Control;
+            this.button10.Location = new System.Drawing.Point(12, 6);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(188, 51);
+            this.button10.TabIndex = 24;
+            this.button10.Text = "Hata Bildir";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // AnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1364, 751);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button2);
@@ -990,7 +991,7 @@
             this.Controls.Add(this.label3);
             this.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AnaSayfa";
@@ -1091,11 +1092,11 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
     }
 }
 
